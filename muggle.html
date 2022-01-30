@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Humans</title>
+
+    <!-- Bootstrap v5.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+          crossorigin="anonymous">
+
+    <!-- My personal JS file for designing the logic-->
+    <script async defer src="js-files/muggle_process.js"></script>
+
+    <!-- My personal CSS link -->
+    <link rel="stylesheet" type="text/css" href="styles/muggle_style.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,300;1,400&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="welcome-human">
+    <div id="human-info">
+        <h1 class="title">Hello Human!</h1>
+
+        <label>Your name is </label>
+        <input type="text" id="username">   <!-- input box for the human's name -->
+
+        <button type="button" class="btn btn-danger" id="save-username">Save</button>
+
+        <p id="welcome-message"></p>        <!-- welcomes the human -->
+
+        <p id="quote-of-the-day"></p>       <!-- quote of the day displayed from API -->
+    </div>
+
+    <footer>
+        <!-- button to go back to welcome.html page -->
+        <button type="button" class="btn btn-danger" id="go-back">Return</button>
+
+        <p id="credits">
+            Man standing on a rock at the beach photo by
+            <a class="foot"
+               href="https://unsplash.com/@kyllik?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+               target="_blank">Kylli Kittus</a> on
+            <a class="foot"
+               href="https://unsplash.com/s/photos/immigrant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+               target="_blank">Unsplash</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
