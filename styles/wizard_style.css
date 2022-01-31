@@ -1,7 +1,6 @@
-/* For the wizard.html page */
+/* Styling for the wizard.html page */
 
-body#welcome-wizard
-{
+body#welcome-wizard {
     background: url(../images/suitcases.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,81 +8,83 @@ body#welcome-wizard
     background-size: cover;
 }
 
-body
-{
-    margin: 30px;
+body {
+    margin: 25px;
     background-color: #2d004d;
     font-family: 'Libre Baskerville', serif;
 }
 
-h3.title
-{
+h1.title {
+    color: darkblue;
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+h3.title {
     color: #2d004d;
     font-family: 'Cinzel', serif;
     text-align: center;
 }
 
-div#wizard-options
-{
+div.row {
+    /* or inline-flex */
+    display: flex;
+}
+
+div#wizard-options {
     background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
     padding: 15px;
 }
 
-div#wizard-info
-{
+div#wizard-info {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid #e3a000;
+    border-radius: 10px;
     padding: 15px;
 }
 
-h1.title
-{
-    color: white;
-    text-align: center;
-    font-family: 'Cinzel', serif;
-}
-
-p#instructions
-{
+p#instructions {
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
     word-spacing: 2px;
-    color: white;
+    color: blue;
+    background-color: yellow;
     font-family: 'Work Sans', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-footer
-{
+footer {
     padding-top: 100px;
 }
 
-#credits
-{
+#credits {
     font-size: 10px;
     color: #9c1203;
     background: rgba(255, 255, 255, 0.6);
     padding: 5px;
 }
 
-a.foot
-{
+a.foot {
     text-decoration: none;
     color: #9c1203;
 }
 
-a.foot:hover
-{
+a.foot:hover {
     color: #2d004d;
 }
 
-input
-{
+input {
     font-family: 'Cedarville Cursive', cursive;
 }
 
-p#welcome-wizard-message
-{
+p#welcome-wizard-message {
     font-family: 'Work Sans', sans-serif;
     margin-top: 20px;
     color: #2d004d;
@@ -91,8 +92,7 @@ p#welcome-wizard-message
     text-transform: capitalize;
 }
 
-p#error-message
-{
+p#error-message {
     font-family: 'Work Sans', sans-serif;
     margin-top: 10px;
     color: white;
@@ -100,33 +100,28 @@ p#error-message
     text-transform: capitalize;
 }
 
-#canvas
-{
+#canvas {
     width: 100px;
     height: 100px;
     float: left;
 }
 
-p#sorting-hat-group
-{
+p#sorting-hat-group {
     width: 200px;
     height: 200px;
     float: right;
 }
 
-div#hatImage
-{
+div#hatImage {
     width: 100px;
     height: 100px;
 }
 
-#bio
-{
+#bio {
     font-size: 20px;
 }
 
-th
-{
+th {
     border: 1px solid #e3a000;
     padding: 5px;
     color: #9c1203;
@@ -134,21 +129,18 @@ th
     font-family: 'Cinzel', serif;
 }
 
-td
-{
+td {
     border: 1px solid #e3a000;
     padding: 5px;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
 }
 
-#story
-{
+#story {
     color: #e3a000;
 }
 
-#text-block
-{
+#text-block {
     background-color: #e3a000;
     color: #2d004d;
     font-weight: bold;

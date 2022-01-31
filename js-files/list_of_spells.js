@@ -1,5 +1,5 @@
+// JavaScript used in secret_key_process.js which is used in secret_key.html
 // https://harrypotter.fandom.com/wiki/List_of_spells
-// https://hp-api.herokuapp.com/
 
 let listOfSpells = [
     {

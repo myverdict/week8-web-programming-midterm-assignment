@@ -1,4 +1,4 @@
-/* Comes from the muggle.html page */
+/* JavaScript for the muggle.html page */
 
 let url = "https://favqs.com/api/qotd";     // Quotes API
 
