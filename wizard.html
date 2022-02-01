@@ -18,11 +18,7 @@
     <link rel="stylesheet" type="text/css" href="styles/wizard_style.css">
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cinzel:wght@700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Staatliches&family=Work+Sans:wght@500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
 </head>
 
 <body id="welcome-wizard">
@@ -37,7 +33,7 @@
             <section>
                 <div class="input-group mb-3">
                     <!-- input box for wizard's name -->
-                    <input type="text" class="form-control" id="wizardName" placeholder="Identify yourself" maxlength=7>
+                    <input type="text" class="form-control" id="wizardName" placeholder="Identify yourself" maxlength="7" autofocus>
 
                     <!-- search button to check enrolled wizards -->
                     <button class="btn btn-success" type="button" id="search-username">Search Wizard Directory</button>
@@ -72,8 +68,8 @@
             <!-- wizard's name that was put in the input box -->
             <p id="welcome-wizard-message"></p>
 
-            <div id="loading-wizard-image">
-                <span class="sr-only">Loading...</span>
+            <div id="loading-wizard-image" class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
 
             <!-- automatic image generation for wizard -->

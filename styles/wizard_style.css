@@ -11,7 +11,7 @@ body#welcome-wizard {
 body {
     margin: 25px;
     background-color: #2d004d;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Quintessential', cursive;
 }
 
 h1.title {
@@ -20,12 +20,10 @@ h1.title {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    font-family: 'Cinzel', serif;
 }
 
 h3.title {
     color: #2d004d;
-    font-family: 'Cinzel', serif;
     text-align: center;
 }
 
@@ -54,7 +52,6 @@ p#instructions {
     word-spacing: 2px;
     color: blue;
     background-color: yellow;
-    font-family: 'Work Sans', sans-serif;
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
@@ -80,12 +77,7 @@ a.foot:hover {
     color: #2d004d;
 }
 
-input {
-    font-family: 'Cedarville Cursive', cursive;
-}
-
 p#welcome-wizard-message {
-    font-family: 'Work Sans', sans-serif;
     margin-top: 20px;
     color: #2d004d;
     font-size: 20px;
@@ -93,7 +85,6 @@ p#welcome-wizard-message {
 }
 
 p#error-message {
-    font-family: 'Work Sans', sans-serif;
     margin-top: 10px;
     color: white;
     font-size: 20px;
@@ -126,14 +117,12 @@ th {
     padding: 5px;
     color: #9c1203;
     text-transform: capitalize;
-    font-family: 'Cinzel', serif;
 }
 
 td {
     border: 1px solid #e3a000;
     padding: 5px;
     text-align: center;
-    font-family: 'Work Sans', sans-serif;
 }
 
 #story {
@@ -147,7 +136,6 @@ td {
     letter-spacing: 1px;
     word-spacing: 2px;
     text-align: center;
-    font-family: 'Cedarville Cursive', cursive;
     padding: 10px;
     border-radius: 10px;
     border: 2px #9c1203 solid;
