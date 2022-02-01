@@ -4,7 +4,7 @@
 let identityURL = "https://robohash.org/";
 
 // Harry Potter API: https://hp-api.herokuapp.com/
-let potterURL = "http://hp-api.herokuapp.com/api/characters";
+let potterURL = "https://hp-api.herokuapp.com/api/characters";
 
 let searchButtonEl = document.querySelector("#search-username");       // search wizard directory button
 let wizardNameInputEl = document.querySelector("#wizardName");         // user name input box
