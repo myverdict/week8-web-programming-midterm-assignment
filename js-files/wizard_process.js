@@ -6,21 +6,21 @@ let identityURL = "https://robohash.org/";
 // Harry Potter API: https://hp-api.herokuapp.com/
 let potterURL = "https://hp-api.herokuapp.com/api/characters";
 
-let searchButtonEl = document.querySelector("#search-username");       // search wizard directory button
-let wizardNameInputEl = document.querySelector("#wizardName");         // user name input box
-let errorMsgParaEl = document.querySelector("#error-message");   // error message for input box
-let wizardInfo = document.querySelector('#wizard-info');                    // wizard-info div element
-let welcomeMessage = document.querySelector("#welcome-wizard-message");     // welcome wizard message
-let instructionsEl = document.querySelector("#instructions");          // give instructions to wizard
-let studentBioTableEl = document.querySelector("#bio");                // wizard table
-let storyEl = document.querySelector("#story");                        // wizard's story
-let clickMeButtonEl = document.querySelector("#click-me");             // Click Me button
-let acceptContractButtonEl = document.querySelector("#accept");        // Accept contract button
+let searchButtonEl = document.querySelector("#search-username");        // search wizard directory button
+let wizardNameInputEl = document.querySelector("#wizardName");          // user name input box
+let errorMsgParaEl = document.querySelector("#error-message");          // error message para for input box
+let wizardInfo = document.querySelector('#wizard-info');                // wizard-info div el
+let welcomeMessage = document.querySelector("#welcome-wizard-message"); // welcome wizard message
+let instructionsEl = document.querySelector("#instructions");           // give instructions to wizard
+let studentBioTableEl = document.querySelector("#bio");                 // wizard table
+let storyEl = document.querySelector("#story");                         // wizard's story
+let clickMeButtonEl = document.querySelector("#click-me");              // Click Me button
+let acceptContractButtonEl = document.querySelector("#accept");         // Accept contract button
 
-// hide the #wizard-info div element until name input is correctly processed
+// hide the #wizard-info div el until name input is correctly processed
 wizardInfo.style.visibility = "hidden";
 
-// hide the #instructions para element until wizard needs directions
+// hide the #instructions para el until wizard needs directions
 instructionsEl.style.visibility = "hidden";
 
 // hide the click me button until table data is displayed
@@ -31,15 +31,15 @@ acceptContractButtonEl.style.visibility = "hidden";
 
 // collect the wizard bio info & store in an object
 let wizardBio = {
-    "name": "",
-    "house": "",
-    "mentor": ""
+    "name": "",     // user enters this value   
+    "house": "",    // randomly generated
+    "mentor": ""    // randomly generated; value is the same as mentorBio.name 
 };
 
 // collect mentor's information from the Harry potter API
-// and store in an object
+// and store these in an object
 let mentorBio = {
-    "name": "",     // this value will be same as wizardBio.name 
+    "name": "",     // value is the same as wizardBio.name 
     "house": "",
     "species": "",
     "ancestry": "",
@@ -56,13 +56,13 @@ let studentImage;                               // student wizard's image
 
 // to get the hat image
 let hatImageEl = document.querySelector("#hatImage");
-let hatImage = null;
+let hatImage = null;    // initial value
 
 // to assign a house image
 let houses = ['Gryffindor', 'Ravenclaw', 'Slytherin', 'Hufflepuff'];
 let sortingHatImageEl = document.querySelector("#sorting-hat-group");
 let groupFirstLetter;   // taken from wizardBio["house"][0]
-let groupImage = null;
+let groupImage = null;  // initial value
 
 let contractText;
 
@@ -96,18 +96,18 @@ searchButtonEl.addEventListener("click", function () {
             return;
         }
 
-        wizardNameInputEl.remove();     // remove the inpue el
-        searchButtonEl.remove();        // remove the search button el
-        document.getElementById("name-help").remove();  // remove the small el note under input
+        wizardNameInputEl.remove();     // remove the input el
+        searchButtonEl.remove();        // remove the search wizard directory button el
+        document.getElementById("name-help").remove();  // remove the small el note under the input box
         errorMsgParaEl.remove();        // remove the error para el
 
-        // Make the wizard-info section visible
+        // Make the #wizard-info section visible
         wizardInfo.style.visibility = "visible";
 
         // Once the user enters a name, change the Welcome innerText & add the name to the page
         welcomeMessage.innerText = `Welcome, ${wizardBio.name} !`;
 
-        // complete the API URL for the fetchingWizardImage function
+        // complete the Robohash API URL for the fetchingWizardImage function
         identityURL = identityURL + wizardBio.name + "?set=set5";
     }
 
@@ -118,7 +118,7 @@ searchButtonEl.addEventListener("click", function () {
 
 // after the wizard clicks the hat
 hatImageEl.addEventListener("click", function () {
-    // remove the hat image element
+    // remove the hat image el
     hatImageEl.remove();
 
     // get a random integer from 0 to 3 to go through the houses array
@@ -140,7 +140,7 @@ hatImageEl.addEventListener("click", function () {
         sortingHatImageEl.appendChild(groupImage); // append image to the html page
     }
 
-    instructionsEl.remove();   // remove the #instructions para element
+    instructionsEl.remove();   // remove the #instructions para el
 
     // callback function to fetch wizard's mentor & display table
     fetchMentor();
@@ -218,27 +218,28 @@ clickMeButtonEl.addEventListener("click", function () {
 
     typeWriter();   // callback function to write the student contract
 
-    clickMeButtonEl.remove();   // remove the click me button element
+    clickMeButtonEl.remove();   // remove the click me button el
 })
 
-// For contract terms & conditions
+// for contract terms & conditions
 let textBlockInsideImageEl = document.querySelector("#text-block");
 
-// initially hide the contract element
+// initially hide the contract el
 textBlockInsideImageEl.style.visibility = 'hidden';
 
 // When the wizard accepts the contract
 acceptContractButtonEl.addEventListener("click", function () {
-    // now show the contract element
+    // remove the story div el and accept contract button from the html
+    storyEl.remove();
+    acceptContractButtonEl.remove();
+
+    // now show the contract el
     textBlockInsideImageEl.style.visibility = 'visible';
 
-    // set the contract in the wizard info section
+    // set the contract in the #wizardInfo section
     contractText += "<hr>Signed & Sealed: " + wizardBio.mentor + " & " + wizardBio.name;
+   
     textBlockInsideImageEl.innerHTML = contractText;
-
-    // remove the story element div and accept contract button from the html
-    storyEl.innerHTML = "";
-    acceptContractButtonEl.remove();
 
     // display final message after 2 seconds (2000 ms)
     setTimeout(function () {
@@ -260,16 +261,16 @@ function fetchingWizardImage() {
             }
         })
         .then(myBlob => {
-            loadingWizardImageEl.remove()  // remove the loader el
+            loadingWizardImageEl.remove();      // remove the loader el
 
             // returns a URL pointing to the object.
             objectImageURL = URL.createObjectURL(myBlob);
-            studentImage = new Image();            // Create a student image el
-            studentImage.src = objectImageURL;     // set the image source attribute
+            studentImage = new Image();         // Create a student image el
+            studentImage.src = objectImageURL;  // set the image source attribute
 
             // listen for the event that the image is ready to load
             studentImage.addEventListener("load", function () {
-                context.drawImage(studentImage, 25, 10, 200, 100);     // draw the image
+                context.drawImage(studentImage, 25, 10, 200, 100);  // draw the image
             })
         })
         .catch(err => {
@@ -279,15 +280,15 @@ function fetchingWizardImage() {
         .finally(() => {
             // if there is no hat image
             if (hatImage === null) {
-                hatImage = new Image();                 // create a new image element
-                hatImage.src = "images/hat.png";        // set the image source
-                hatImage.width = 100;                   // set the image width
-                hatImage.height = 100;                  // set the image height
-                hatImage.style.cursor = "pointer";      // set the cursor style on the hat image
-                hatImageEl.appendChild(hatImage);  // append the image to the html page
+                hatImage = new Image();             // create a new image element
+                hatImage.src = "images/hat.png";    // set image source
+                hatImage.width = 100;               // set image width
+                hatImage.height = 100;              // set image height
+                hatImage.style.cursor = "pointer";  // set cursor style on the hat image
+                hatImageEl.appendChild(hatImage);   // append image to the html page
             }
 
-            // display the #instructions para element
+            // display the #instructions para el
             instructionsEl.style.visibility = "visible";
 
             // instruct the wizard to click the hat
@@ -296,7 +297,8 @@ function fetchingWizardImage() {
 }
 
 
-// fetch the wizard's mentor from the Potter API, generate wizard's table, & show the click me button
+// fetch the wizard's mentor from the Harry Potter API, and 
+// generate the wizard's table, & show the click me button
 function fetchMentor() {
     // returns a random integer from 0 to 406
     let randomIndex = Math.floor(Math.random() * 407);
@@ -307,29 +309,29 @@ function fetchMentor() {
             return response.json();
         })
         .then(data => {
-            // allot the random mentor to the wizardBio object
-            // set the wizardBio mentor property & mentorBio name property
+            // set the wizardBio mentor property
             wizardBio.mentor = data[randomIndex].name;
             console.log("Wizard's mentor's name: " + wizardBio.mentor); // debug
 
+            // assign the same wizardBio.mentor to mentorBio.name
             mentorBio.name = wizardBio.mentor;
             console.log("Mentor's name: " + mentorBio.name);            // debug
 
-            // Get mentor's house if any
+            // get mentor's house if any
             mentorBio.house = data[randomIndex].house;
-            console.log("Mentor House: " + mentorBio.house);        // debug
+            console.log("Mentor House: " + mentorBio.house);            // debug
 
-            // Get mentor's ancestry if any
+            // get mentor's ancestry if any
             mentorBio.ancestry = data[randomIndex].ascestry;
-            console.log("Mentor's Ancestry: " + mentorBio.ancestry);   // debug
+            console.log("Mentor's Ancestry: " + mentorBio.ancestry);    // debug
 
-            // Get mentor's species if any
+            // get mentor's species if any
             mentorBio.species = data[randomIndex].species;
-            console.log("Mentor Species: " + mentorBio.species);    // debug
+            console.log("Mentor Species: " + mentorBio.species);        // debug
 
             // Get mentor's wizard status (true/false) if any
             mentorBio.isWizard = data[randomIndex].wizard;
-            console.log("Mentor is a wizard: " + mentorBio.isWizard);    // debug
+            console.log("Mentor is a wizard: " + mentorBio.isWizard);   // debug
         })
         .catch(err => {
             alert("Error: " + err);
@@ -391,8 +393,8 @@ function generate_table() {
 // enter key button function for the search button
 document.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
-        searchButtonEl.click();             // click the search button
-        wizardNameInputEl.value = "";  // clear the input box
+        searchButtonEl.click();         // click the search button
+        wizardNameInputEl.value = "";   // clear the input box
     }
 })
 
@@ -402,7 +404,7 @@ document.getElementById("go-back").onclick = function () {
     location.href = "welcome.html";
 };
 
-// when the page is reloaded/refreshed
+// when the page is reloaded/refreshed, always clear the input text box
 window.onload = function () {
-    wizardNameInputEl.value = "";     // clear the input text box
+    wizardNameInputEl.value = "";   // clear the input text box
 }
