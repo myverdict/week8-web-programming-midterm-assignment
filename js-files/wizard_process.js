@@ -158,21 +158,21 @@ clickMeButtonEl.addEventListener("click", function () {
 
     // if the mentor is not a human
     if (mentorBio.species != "human") {
-        contractText += `I desire thee to knoweth yond i am not a human, 
+        contractText += `I desire thee to knoweth yond I am not a human, 
                          but a ${mentorBio.species}. `
     }
     // if the mentor is a muggle/human
     else if (mentorBio.ancestry === "muggle" || mentorBio.species === "human") {
         // if the muggle/human is not a wizard
         if (mentorBio.isWizard === false) {
-            contractText += `What i signeth h're, i shalt f'rget the next minute. 
+            contractText += `What I signeth h're, I shalt f'rget the next minute. 
                          All actions has't consequences.  So, rememb'r thou art 
                          on thy owneth and thee, high-lone, art responsible f'r 
                          thy actions. `;
         }
         // if the muggle/human is a wizard
         else {
-            contractText += `Despite being a human, i am still a wizard. 
+            contractText += `Despite being a human, I am still a wizard. 
                              Respect all and thee shalt riseth and learneth. `;
         }
     }
@@ -186,11 +186,13 @@ clickMeButtonEl.addEventListener("click", function () {
     else {
         // the there is no mentor house
         if (mentorBio.house === "") {
-            contractText += `Trusteth me and i shalt guideth thee through heaven and hell. 
+            contractText += `I belongeth to nay house. Still thee shalt trusteth me and 
+                             I shalt guideth thee through heaven and hell. 
                              Doubteth me and thee shalt loseth thy way. `;
 
             // if the mentor is a human/muggle & is not a wizard
-            if (mentorBio.species === "human" && mentorBio.isWizard === false) {
+            if ((mentorBio.ancestry === "muggle" || mentorBio.species === "human") && 
+                 mentorBio.isWizard === false) {
                 contractText += `That is a Joke! Ha Ha Ha! `;
             }
         }
