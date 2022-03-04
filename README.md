@@ -1,6 +1,6 @@
 # week8-web-programming-midterm-assignment
 <h2>Harry Potter Theme</h2>
-This lab demonstrates the use of APIs and the usage of JavaScript to manipulate the DOM
+This lab demonstrates the use of Restful APIs and the usage of JavaScript to manipulate the DOM
 
 <a href="https://myverdict.github.io/week8-web-programming-midterm-assignment/index.html">
     Click here to view live!
