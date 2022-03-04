@@ -229,8 +229,8 @@ textBlockInsideImageEl.style.visibility = 'hidden';
 
 // When the wizard accepts the contract
 acceptContractButtonEl.addEventListener("click", function () {
-    // hide the story div el and remove the accept contract button from the html
-    storyEl.style.visibility = 'hidden';
+    // remove the story div el and accept contract button from the html
+    storyEl.innerHTML = "";
     acceptContractButtonEl.remove();
 
     // now show the contract el
