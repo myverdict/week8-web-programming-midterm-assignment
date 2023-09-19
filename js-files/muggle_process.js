@@ -1,11 +1,11 @@
 /* JavaScript for the muggle.html page */
-
-let url = "https://favqs.com/api/qotd"; // Quotes API
+let url = "https://api.quotable.io/random"; // Quotable API
 
 let saveButtonElement = document.querySelector("#save-username");
 let nameInputElement = document.querySelector("#username");
 let welcomeMessage = document.querySelector("#welcome-message"); // a p tag
 let quoteOfTheDay = document.querySelector("#quote-of-the-day"); // a p tag
+let author = document.querySelector("#author"); // a p tag
 
 // Add an event listener for the mouse click of the save button
 saveButtonElement.addEventListener("click", function () {
@@ -34,14 +34,20 @@ saveButtonElement.addEventListener("click", function () {
 
 // function that fetches a quote from the Quotes API
 function fetchingQuote() {
-  fetch(url)
+  fetch(url, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+  })
     .then((res) => {
       return res.json();
     })
     .then((quoteData) => {
       // display the quote of the day
       quoteOfTheDay.innerHTML =
-        "<label>Quote of the day</label><br>" + quoteData.quote.body;
+        "<label>Quote of the day</label><br>" + quoteData.content;
+      author.innerHTML = "---" + quoteData.author;
     })
     .catch((err) => {
       alert("Error: " + err);
