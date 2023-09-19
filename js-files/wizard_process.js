@@ -3,8 +3,8 @@
 // wizard's identity from robohash API
 let identityURL = "https://robohash.org/";
 
-// Harry Potter API: https://hp-api.herokuapp.com/
-let potterURL = "https://hp-api.herokuapp.com/api/characters";
+// Harry Potter API: https://hp-api.onrender.com/
+let potterURL = "https://hp-api.onrender.com/api/characters";
 
 let searchButtonEl = document.querySelector("#search-username"); // search wizard directory button
 let wizardNameInputEl = document.querySelector("#wizardName"); // user name input box
@@ -159,41 +159,41 @@ clickMeButtonEl.addEventListener("click", function () {
   let speed = 40;
 
   contractText = `Contracteth: I, ${wizardBio.mentor.toUpperCase()},
-                    declare thee, ${wizardBio.name}, mine own mentee. `;
+                  declare thee, ${wizardBio.name}, mine own mentee. `;
 
   // if the mentor is not a human
   if (mentorBio.species != "human") {
     contractText += `I desire thee to knoweth yond I am not a human,
-                         but a ${mentorBio.species}. `;
+                     but a ${mentorBio.species}. `;
   }
   // if the mentor is a muggle/human
   else if (mentorBio.ancestry === "muggle" || mentorBio.species === "human") {
     // if the muggle/human is not a wizard
     if (mentorBio.isWizard === false) {
       contractText += `What I signeth h're, I shalt f'rget the next minute.
-                         All actions has't consequences.  So, rememb'r thou art
-                         on thy owneth and thee, high-lone, art responsible f'r
-                         thy actions. `;
+                       All actions has't consequences.  So, rememb'r thou art
+                       on thy owneth and thee, high-lone, art responsible f'r
+                       thy actions. `;
     }
     // if the muggle/human is a wizard
     else {
       contractText += `Despite being a human, I am still a wizard.
-                             Respect all and thee shalt riseth and learneth. `;
+                       Respect all and thee shalt riseth and learneth. `;
     }
   }
 
   // if the mentor and the wizard belong to the same house
   if (mentorBio.house === wizardBio.house) {
     contractText += `Hurray! we belongeth to the same house.
-                         We art going to has't so much excit'ment. `;
+                     We art going to has't so much excit'ment. `;
   }
   // if the mentor and the wizard belong to different houses
   else {
     // the there is no mentor house
     if (mentorBio.house === "") {
       contractText += `I belongeth to nay house. Still thee shalt trusteth me and
-                             I shalt guideth thee through heaven and hell.
-                             Doubteth me and thee shalt loseth thy way. `;
+                       I shalt guideth thee through heaven and hell.
+                       Doubteth me and thee shalt loseth thy way. `;
 
       // if the mentor is a human/muggle & is not a wizard
       if (
@@ -206,9 +206,9 @@ clickMeButtonEl.addEventListener("click", function () {
     // if there is a mentor house but is different from the wizard's house
     else {
       contractText += `I belongeth to house, ${mentorBio.house.toUpperCase()},
-                             and thee belongeth to house, ${wizardBio.house.toUpperCase()}.
-                             Sweet w'rds shall not beest off'red, but intense training
-                             and practiceth thee shouldst adh're to. `;
+                       and thee belongeth to house, ${wizardBio.house.toUpperCase()}.
+                       Sweet w'rds shall not beest off'red, but intense training
+                       and practiceth thee shouldst adh're to. `;
     }
   }
 
@@ -253,7 +253,7 @@ acceptContractButtonEl.addEventListener("click", function () {
   // display final message after 2 seconds (2000 ms)
   setTimeout(function () {
     storyEl.innerHTML = `Your documents have been filed.
-                             Now enough of the greetings, and get to your classes!`;
+                         Now enough of the greetings, and get to your classes!`;
   }, 2000);
 });
 
