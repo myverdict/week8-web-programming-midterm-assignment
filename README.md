@@ -54,3 +54,17 @@ This lab demonstrates the use of APIs and the usage of JavaScript to manipulate 
     <a href="https://lingojam.com/EnglishtoShakespearean">LingoJam</a>
   </li>
 </ul>
+
+<hr />
+
+<p>
+  <i>
+    ITEC 2560-60: Web Client and Server Programming
+    <br />
+    Minneapolis Community and Technical College (MCTC), Minneapolis, Minnesota
+    <br />
+    Prof. Clara James, Fall 2020
+    <br />
+    August 25, 2020 to December 15, 2020 (Tuesdays)
+  </i>
+</p>

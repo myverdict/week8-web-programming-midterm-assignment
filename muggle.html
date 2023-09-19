@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Humans</title>
 
-    <!-- Bootstrap v5.1 -->
+    <!-- Bootstrap v5.3.2 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
 
@@ -31,19 +31,19 @@
     <div id="human-info">
       <h1 class="title">Hello Human!</h1>
 
-      <label>Your name is </label>
-      <input type="text" id="username" />
+      <label for="username">Your name is </label>
       <!-- input box for the human's name -->
+      <input type="text" id="username" autocomplete="name" />
 
       <button type="button" class="btn btn-danger" id="save-username">
         Save
       </button>
 
-      <p id="welcome-message"></p>
       <!-- welcomes the human -->
+      <p id="welcome-message"></p>
 
-      <p id="quote-of-the-day"></p>
       <!-- quote of the day displayed from API -->
+      <p id="quote-of-the-day"></p>
     </div>
 
     <footer>
@@ -56,15 +56,17 @@
           class="foot"
           href="https://unsplash.com/@kyllik?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
           target="_blank"
-          >Kylli Kittus</a
         >
+          Kylli Kittus
+        </a>
         on
         <a
           class="foot"
           href="https://unsplash.com/s/photos/immigrant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
           target="_blank"
-          >Unsplash</a
-        >.
+        >
+          Unsplash
+        </a>
       </p>
     </footer>
   </body>

@@ -62,7 +62,10 @@ footer {
 }
 
 #credits {
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
   color: #9c1203;
   background: rgba(255, 255, 255, 0.6);
   padding: 5px;
