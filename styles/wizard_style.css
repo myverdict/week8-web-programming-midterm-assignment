@@ -1,142 +1,142 @@
 /* Styling for the wizard.html page */
 
 body#welcome-wizard {
-    background: url(../images/suitcases.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: url(../images/suitcases.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-    margin: 25px;
-    background-color: #2d004d;
-    font-family: 'Quintessential', cursive;
+  margin: 25px;
+  background-color: #2d004d;
+  font-family: "Quintessential", cursive;
 }
 
 h1.title {
-    color: darkblue;
-    background-color: yellow;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+  color: darkblue;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 h3.title {
-    color: #2d004d;
-    text-align: center;
+  color: #2d004d;
+  text-align: center;
 }
 
 div.row {
-    /* or inline-flex */
-    display: flex;
+  /* or inline-flex */
+  display: flex;
 }
 
 div#wizard-options {
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 15px;
 }
 
 div#wizard-info {
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid #e3a000;
-    border-radius: 10px;
-    padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #e3a000;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 p#instructions {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
-    word-spacing: 2px;
-    color: blue;
-    background-color: yellow;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  word-spacing: 2px;
+  color: blue;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 footer {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 #credits {
-    font-size: 10px;
-    color: #9c1203;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 5px;
+  font-size: 10px;
+  color: #9c1203;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 5px;
 }
 
 a.foot {
-    text-decoration: none;
-    color: #9c1203;
+  text-decoration: none;
+  color: #9c1203;
 }
 
 a.foot:hover {
-    color: #2d004d;
+  color: #2d004d;
 }
 
 p#welcome-wizard-message {
-    margin-top: 20px;
-    color: #2d004d;
-    font-size: 20px;
-    text-transform: capitalize;
+  margin-top: 20px;
+  color: #2d004d;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 p#error-message {
-    margin-top: 10px;
-    color: white;
-    font-size: 20px;
-    text-transform: capitalize;
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 #canvas {
-    width: 100px;
-    height: 100px;
-    float: left;
+  width: 100px;
+  height: 100px;
+  float: left;
 }
 
 p#sorting-hat-group {
-    width: 200px;
-    height: 200px;
-    float: right;
+  width: 200px;
+  height: 200px;
+  float: right;
 }
 
 div#hatImage {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 #bio {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 th {
-    border: 1px solid #e3a000;
-    padding: 5px;
-    color: #9c1203;
-    text-transform: capitalize;
+  border: 1px solid #e3a000;
+  padding: 5px;
+  color: #9c1203;
+  text-transform: capitalize;
 }
 
 td {
-    border: 1px solid #e3a000;
-    padding: 5px;
-    text-align: center;
+  border: 1px solid #e3a000;
+  padding: 5px;
+  text-align: center;
 }
 
 #story {
-    color: #e3a000;
+  color: #e3a000;
 }
 
 #text-block {
-    background-color: #e3a000;
-    color: #2d004d;
-    font-weight: bold;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px #9c1203 solid;
+  background-color: #e3a000;
+  color: #2d004d;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px #9c1203 solid;
 }
