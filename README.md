@@ -7,6 +7,11 @@ This lab demonstrates the use of APIs and the usage of JavaScript to manipulate 
   Click here to view live!
 </a>
 
+<p>
+  See, Week 8 Assignment repository (OLD)
+  <a href="https://github.com/myverdict/ITEC-week8-midterm-project">here</a>
+</p>
+
 <h5>Image Credits</h5>
 <ul>
   <li>
