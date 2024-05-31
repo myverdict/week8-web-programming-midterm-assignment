@@ -4,7 +4,8 @@
 let identityURL = "https://robohash.org/";
 
 // Harry Potter API: https://hp-api.onrender.com/
-let potterURL = "https://hp-api.onrender.com/api/characters";
+// let potterURL = "https://hp-api.onrender.com/api/characters";
+let potterURL = "https://hp-api.herokuapp.com/api/characters";
 
 let searchButtonEl = document.querySelector("#search-username"); // search wizard directory button
 let wizardNameInputEl = document.querySelector("#wizardName"); // user name input box
@@ -306,15 +307,14 @@ function fetchingWizardImage() {
 // fetch the wizard's mentor from the Harry Potter API, and
 // generate the wizard's table, & show the click me button
 function fetchMentor() {
-  // returns a random integer from 0 to 406
-  let randomIndex = Math.floor(Math.random() * 407);
-  console.log(randomIndex); // debug
-
   fetch(potterURL)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
+    .then(response => response.json())
+    .then(data => {
+      console.log('data: ', data);
+      // returns a random integer from 0 to 437
+      let randomIndex = Math.floor(Math.random() * 438);
+      console.log('randomIndex: ', randomIndex); // debug
+
       // set the wizardBio mentor property
       wizardBio.mentor = data[randomIndex].name;
       console.log("Wizard's mentor's name: " + wizardBio.mentor); // debug
