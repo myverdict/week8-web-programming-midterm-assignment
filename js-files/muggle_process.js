@@ -1,5 +1,5 @@
 /* JavaScript for the muggle.html page */
-let url = "https://api.quotable.io/random"; // Quotable API
+let url = "https://cors-anywhere.herokuapp.com/https://favqs.com/api/qotd";
 
 let saveButtonElement = document.querySelector("#save-username");
 let nameInputElement = document.querySelector("#username");
@@ -34,20 +34,14 @@ saveButtonElement.addEventListener("click", function () {
 
 // function that fetches a quote from the Quotes API
 function fetchingQuote() {
-  fetch(url, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json",
-    },
-  })
+  fetch(url)
     .then((res) => {
       return res.json();
     })
-    .then((quoteData) => {
+    .then((data) => {
       // display the quote of the day
-      quoteOfTheDay.innerHTML =
-        "<label>Quote of the day</label><br>" + quoteData.content;
-      author.innerHTML = "---" + quoteData.author;
+      quoteOfTheDay.innerHTML = "<label>Quote of the day</label><br>" + data.quote.body;
+      author.innerHTML = "---" + data.quote.author;
     })
     .catch((err) => {
       alert("Error: " + err);
