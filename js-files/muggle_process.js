@@ -1,6 +1,7 @@
 /* JavaScript for the muggle.html page */
 // let url = "https://cors-anywhere.herokuapp.com/https://favqs.com/api/qotd";
-const url = "https://favqs.com/api/qotd";
+// const url = "https://favqs.com/api/qotd";
+let url = 'https://corsproxy.io/?' + encodeURIComponent("https://favqs.com/api/qotd");
 
 let saveButtonElement = document.querySelector("#save-username");
 let nameInputElement = document.querySelector("#username");

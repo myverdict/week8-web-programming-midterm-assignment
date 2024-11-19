@@ -58,6 +58,11 @@ This lab demonstrates the use of APIs and the usage of JavaScript to manipulate 
     For Shakespearean English, check out
     <a href="https://lingojam.com/EnglishtoShakespearean">LingoJam</a>
   </li>
+
+  <li>
+    Cors proxy
+    <a href="https://corsproxy.io/">Cors Proxy</a>
+  </li>
 </ul>
 
 <hr />
